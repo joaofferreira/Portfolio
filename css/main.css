@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans", Bold 700;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 95%);
+}
+
+#parallax img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.top{
+  top: -150px;
+}
+.top-left{
+  top: -350px;
+}
+.bottom{
+  top: 150px;
+}
+.background{
+  height: 100%;
+}
+#parallax h2 {
+  position: relative;
+  font-size: 10vw;
+  text-shadow: black 0.01em 0.01em 0.02em
+
+
+}
+#parallax h3 {
+  position: absolute;
+  top: 60%;
+  text-shadow: black 0.1em 0.1em 0.2em
+
+}
+.text-white a {
+  color: white;
+  text-decoration: none;
+}
+
+.text-white a:hover {
+  color: #202020;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  background: white;
+  transition: all 0.5s ease;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+.dropdown-menu a:hover {
+  background-color: #343a40;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.separator-line {
+  border: 0;
+  border-bottom: 5px solid dimgray;
+  width: 0;
+  animation: separator-width 1s ease forwards;
+}
+
+hr{
+  border-top: 5px solid rgba(0,0,0,0);
+
+}
+
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.box {
+  background: dimgray;
+  float: left;
+  margin-right: 15px;
+  padding: 15px;
+  padding-left: 40px;
+}
+
+.box-skills {
+  width: 300px;
+  height: 200px;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+}
+
+.box-skills i {
+  font-size: 150px;
+}
+
+.box-skills:hover {
+  animation: colorchange 0.5s forwards;
+}
+
+.box-about {
+  outline: 4px solid black;
+  outline-offset: 15px;
+  width: 100%;
+  height: 300px;
+}
+
+@keyframes colorchange {
+  from {
+    background-color: dimgray;
+  }
+  to {
+    background-color: darkred;
+  }
+}
+
+.btn {
+  transition: transform ease-out 250ms;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+}
+
+.carouselContainer form{
+  top: 30%;
+}
+
+.item-1,
+.item-2,
+.item-3 {
+  min-height: 60v;
+  clip-path: polygon(0 5%, 100% 10%, 100% 100%, 0 100%);
+  filter: grayscale(50%);
+  filter: brightness(0.4);
+}
+
+input {
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  padding-bottom: 6px;  
+  border-width: 3px;
+  border-image: linear-gradient(to right, darkred,transparent);
+  border-image-slice: 1;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5em;
+}
+
+input:focus::placeholder {
+  color: white;
+  font-weight: 500;
+}
+
+
+a :hover{
+  color: rgba(255, 255, 255, 1)!important;
+}
+
+
