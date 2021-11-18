@@ -19,6 +19,7 @@ var navbarHeight=navbar.offsetHeight;
 var parallaxWindow=document.getElementById("parallax");
 var parallaxHeight=parallaxWindow.offsetHeight;
 
+/*
 function navbarActiveElements() {
   y = window.scrollY;
   if(y>240){
@@ -38,7 +39,32 @@ function navbarActiveElements() {
     //  console.log(`Sorry, we are out of`);
   }
 }
+*/
 
+function removeActive() {
+  var elems = document.querySelectorAll(".nav-item");
+
+  [].forEach.call(elems, function(el) {
+      el.classList.remove("active");
+  }
+  );}
+
+
+
+function navbarActiveElements() {
+    var two = isInViewport(document.getElementById("hrSkills")),
+        three = isInViewport(document.getElementById("hrAbout")),
+        four = isInViewport(document.getElementById("hrProjects")),
+        five = isInViewport(document.getElementById("form"));
+
+    removeActive();
+
+    two ? document.getElementById("two").classList.add("active") :
+        three ? document.getElementById("three").classList.add("active") :
+        four ? document.getElementById("four").classList.add("active") :
+        five ? document.getElementById("five").classList.add("active") :
+        document.getElementById("one").classList.add("active");
+}
 
 function navbarFixed() {
 
@@ -49,4 +75,14 @@ function navbarFixed() {
     navbar.classList.remove("fixed-top");
     parallaxWindow.style.marginTop = "0px";
   }
+}
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }

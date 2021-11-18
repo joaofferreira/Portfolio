@@ -3,6 +3,10 @@ html {
   font-family: "Noto Sans", Bold 700;
 }
 
+a :hover{
+  color: rgba(255, 255, 255, 1)!important;
+}
+
 body {
   background-color: #fafafa;
 }
@@ -86,16 +90,15 @@ body {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+hr{
+  border-top: 5px solid rgba(0,0,0,0);
+}
+
 .separator-line {
   border: 0;
   border-bottom: 5px solid dimgray;
   width: 0;
   animation: separator-width 1s ease forwards;
-}
-
-hr{
-  border-top: 5px solid rgba(0,0,0,0);
-
 }
 
 @keyframes separator-width {
@@ -199,8 +202,11 @@ input:focus::placeholder {
 }
 
 
-a :hover{
-  color: rgba(255, 255, 255, 1)!important;
+.scale {
+  animation: scale 1s ease forwards;
 }
 
-
+@keyframes scale {
+  0%   {transform: scale(.5);}
+  100% {transform: scale(1);}
+}
