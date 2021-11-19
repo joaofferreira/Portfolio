@@ -162,6 +162,24 @@ hr {
   transition: transform ease-out 250ms;
 }
 
+.shake{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 .btn:hover {
   transform: scale(1.1);
 }
@@ -218,6 +236,7 @@ a.anchor {
   visibility: hidden;
 }
 
+
 .progressBar {
   animation: progressAnimation 1s ease forwards;
 }
@@ -227,7 +246,7 @@ a.anchor {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: var(--w);
   }
 }
 
