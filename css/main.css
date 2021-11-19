@@ -30,14 +30,9 @@ body {
   object-fit: cover;
 }
 .top {
-  top: -150px;
+  top: -5vw;
 }
-.top-left {
-  top: -350px;
-}
-.bottom {
-  top: 150px;
-}
+
 .background {
   height: 100%;
 }
