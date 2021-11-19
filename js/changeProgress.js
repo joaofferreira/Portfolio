@@ -1,4 +1,5 @@
 var skillsIcons = document.querySelectorAll(".box-skills>i");
+var topCardImgs = document.querySelectorAll(".card-img-top");
 var progressBars = document.querySelectorAll(".progress-bar");
 var resumeBtn = document.getElementById("resumeBtn");
 
@@ -12,6 +13,12 @@ function animations() {
     hrProjects.classList.add("separator-line");
   }
   skillsIcons.forEach((element) => {
+    if (isInViewport(element)) {
+      element.classList.add("scale");
+    }
+  });
+
+  topCardImgs.forEach((element) => {
     if (isInViewport(element)) {
       element.classList.add("scale");
     }

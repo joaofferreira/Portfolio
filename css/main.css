@@ -230,6 +230,8 @@ a.anchor {
 .card-img-top {
   padding-top: 10px;
   min-height: 205px;
+  transform: scale(0.8);
+
 }
 
 
@@ -245,6 +247,7 @@ a.anchor {
   width: 100%;
 padding-top: 0;
 margin: 0;
+
 }
 
 
