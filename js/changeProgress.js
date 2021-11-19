@@ -11,9 +11,6 @@ function animations() {
   } else if (isInViewport(hrProjects)) {
     hrProjects.classList.add("separator-line");
   }
-  if (isInViewport(resumeBtn)) {
-    resumeBtn.classList.add("shake");
-  }
   skillsIcons.forEach((element) => {
     if (isInViewport(element)) {
       element.classList.add("scale");
