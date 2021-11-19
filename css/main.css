@@ -3,8 +3,8 @@ html {
   font-family: "Noto Sans", Bold 700;
 }
 
-a :hover{
-  color: rgba(255, 255, 255, 1)!important;
+a :hover {
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 #parallax {
-  background-color: #303030 ;
+  background-color: #303030;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -29,30 +29,27 @@ body {
   width: 100%;
   object-fit: cover;
 }
-.top{
+.top {
   top: -150px;
 }
-.top-left{
+.top-left {
   top: -350px;
 }
-.bottom{
+.bottom {
   top: 150px;
 }
-.background{
+.background {
   height: 100%;
 }
 #parallax h2 {
   position: relative;
   font-size: 10vw;
-  text-shadow: black 0.01em 0.01em 0.02em
-
-
+  text-shadow: black 0.01em 0.01em 0.02em;
 }
 #parallax h3 {
   position: absolute;
   top: 60%;
-  text-shadow: black 0.1em 0.1em 0.2em
-
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 .text-white a {
   color: white;
@@ -91,8 +88,8 @@ body {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-hr{
-  border-top: 5px solid rgba(0,0,0,0);
+hr {
+  border-top: 5px solid rgba(0, 0, 0, 0);
 }
 
 .separator-line {
@@ -127,10 +124,22 @@ hr{
 
 .box-skills i {
   font-size: 120px;
+  transform: scale(0.8);
+}
+.scale {
+  animation: scale 1s ease forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .box-skills:hover {
-  animation: colorchange 0.5s forwards;
+  animation: colorchange 0.8s forwards;
 }
 
 .box-about {
@@ -162,7 +171,7 @@ hr{
   width: 100%;
 }
 
-.carouselContainer form{
+.carouselContainer form {
   top: 30%;
 }
 
@@ -186,12 +195,11 @@ input {
 }
 
 input:focus {
-  padding-bottom: 6px;  
+  padding-bottom: 6px;
   border-width: 3px;
-  border-image: linear-gradient(to right, white,transparent);
+  border-image: linear-gradient(to right, white, transparent);
   border-image-slice: 1;
 }
-
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.75);
@@ -203,21 +211,26 @@ input:focus::placeholder {
   font-weight: 500;
 }
 
-
-.scale {
-  animation: scale 1s ease forwards;
-}
-
-@keyframes scale {
-  0%   {transform: scale(.5);}
-  100% {transform: scale(1);}
-}
-
-
-
 a.anchor {
   display: block;
   position: relative;
   top: -72px;
   visibility: hidden;
+}
+
+.progressBar {
+  animation: progressAnimation 1s ease forwards;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.card-img-top {
+  padding-top: 10px;
 }
