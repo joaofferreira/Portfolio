@@ -24,17 +24,17 @@ var hrProjects = document.getElementById("hrProjects");
 
 //change the active nav-item to the one in the viewport
 function navbarActiveElements() {
-  removeActive();
-
   isInViewport(hrSkills)
-    ? document.getElementById("two").classList.add("active")
+    ? (removeActive(), document.getElementById("two").classList.add("active"))
     : isInViewport(hrAbout)
-    ? document.getElementById("three").classList.add("active")
+    ? (removeActive(), document.getElementById("three").classList.add("active"))
     : isInViewport(hrProjects)
-    ? document.getElementById("four").classList.add("active")
+    ? (removeActive(), document.getElementById("four").classList.add("active"))
     : isInViewport(document.getElementById("form"))
-    ? document.getElementById("five").classList.add("active")
-    : document.getElementById("one").classList.add("active");
+    ? (removeActive(), document.getElementById("five").classList.add("active"))
+    : document.getElementById("parallaxContainer").clientHeight >
+        window.scrollY &&
+      (removeActive(), document.getElementById("one").classList.add("active"));
 }
 
 var navbar = document.getElementById("navbar");
